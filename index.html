@@ -1,0 +1,80 @@
+<!doctype html>
+<html class="no-js" lang="" ng-app="nestedForm">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/w3.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body class="w3-light-grey" ng-controller="formController">
+        <div class="w3-row">
+            <div class="w3-col l8">{{msg}}
+                <header class="w3-teal w3-center"><h3>School Registration</h3></header>
+                <form class="w3-card-4 w3-container" name="registrationForm" novalidate>
+                        <p>
+                          <label class="w3-label">School Name
+                            <input class="w3-input w3-sand" type="text" name="name" value="" placeholder="enter school name">
+                          </label>
+                        </p>
+                        
+                        <p>
+                          <label class="w3-label">School Level </label>
+                              <label class="w3-label">
+                                    <input class="w3-input w3-sand" type="checkbox" name="schoolLevel">Primary
+                              </label>
+                              <label class="w3-label">
+                                  <input class="w3-input w3-sand" type="checkbox" name="schoolLevel">Secondary                              
+                              </label>
+                              <label class="w3-label">
+                                <input class="w3-input w3-sand" type="checkbox" name="schoolLevel">Higher Secondary
+                              </label>
+                        </p>
+
+                        <p>
+                        <label class="w3-label">School Borad</label>
+                            <label class="w3-label">
+                                <input class="w3-sand w3-input" type="radio" name="schoolBoard">CBSE
+                            </label>
+                            <label class="w3-label">
+                                <input class="w3-sand w3-input" type="radio" name="schoolBoard">ICSE                            
+                            </label>
+                        </p>
+                        <p>
+                          <label class="w3-label">School Type</label>
+                            <label class="w3-label">
+                                <input class="w3-input" type="radio" name="schoolType">Boys
+                            </label>
+                            <label class="w3-label">
+                                <input class="w3-input" type="radio" name="schoolType">Girls
+                            </label>
+                            <label class="w3-label">
+                                <input class="w3-input" type="radio" name="schoolType">Co-Education
+                            </label>
+                        </p>
+                        <p>
+                            <label class="w3-label">Profile Image</label>
+                            <input type="file" name="schoolProfileImage">
+                        </p>
+                        <p>
+                            <label class="w3-label">Website URL</label>
+                            <input type="url" name="website">
+                        </p>
+                        <ng-form>
+                            <label for=""></label>
+                        </ng-form>
+                        <input type="submit" value="Submit">
+                    </form>
+            </div><!-- col -->
+        </div><!-- row -->
+
+        <script src="js/node_modules/angular.min.js"></script>
+        <script src="js/app/app.js"></script>
+        <script src="js/controllers/formController.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
