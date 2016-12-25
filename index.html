@@ -16,93 +16,14 @@
     </head>
     <body ng-controller="formController">
       <main class="w3-container">
-        <section class="w3-card-4">{{msg}}
-            <header class="w3-teal w3-center"><h3>SCHOOL REGISTRATION</h3></header>
-          <div class="w3-row">
-            <div class="w3-col">
-              <form class="w3-border w3-border-teal w3-padding" name="registrationForm" novalidate ng-submit="register(school)">
-              <p>
-                <label class="w3-label w3-validate">School Name:
-                  <input class="w3-input" type="text" name="name" value="" placeholder="enter school name" ng-model="school.name">
-                </label>
-              </p>
-              
-              <p>
-                <label class="w3-label">School Level: </label>
-                  <label class="w3-label">
-                        <input class="w3-sand w3-check" type="checkbox" name="schoolLevel" ng-model="school.Primary" ng-true-value="'Yes'" ng-false-value="'No'">Primary
-                  </label>
-                  <label class="w3-label">
-                      <input class="w3-sand w3-check" type="checkbox" name="schoolLevel" ng-model="school.Secondary"  ng-true-value="'Yes'" ng-false-value="'No'">Secondary                              
-                  </label>
-                  <label class="w3-label">
-                    <input class="w3-sand w3-check" type="checkbox" name="schoolLevel" ng-model="school.HigherSecondary" ng-true-value="'Yes'" ng-false-value="'No'">Higher Secondary
-                  </label>
-              </p>
-
-              <p>
-              <label class="w3-label">School Borad: </label>
-                  <label class="w3-label">
-                      <input class="w3-sand w3-radio" type="radio" name="schoolBoard" value="CBSE" ng-model="school.Board">CBSE
-                  </label>
-                  <label class="w3-label">
-                      <input class="w3-sand w3-radio" type="radio" name="schoolBoard" value="ICSE" ng-model="school.Board">ICSE                            
-                  </label>
-              </p>
-              <p>
-                <label class="w3-label">School Type: </label>
-                  <label class="w3-label">
-                      <input class="w3-radio" type="radio" name="schoolType" ng-model="school.SchoolType" value="Boys">Boys
-                  </label>
-                  <label class="w3-label">
-                      <input class="w3-radio" type="radio" name="schoolType" ng-model="school.SchoolType" value="Girls">Girls
-                  </label>
-                  <label class="w3-label">
-                      <input class="w3-radio" type="radio" name="schoolType" ng-model="school.SchoolType" value="Co-Education">Co-Education
-                  </label>
-              </p>
-              <p>
-                  <label class="w3-label">Profile Image: </label>
-                  <input type="file" name="schoolProfileImage">
-              </p>
-              <p>
-                  <label class="w3-label w3-validate">Website URL:
-                    <input class="w3-input" type="url" name="website" ng-model="school.Url" placeholder="enter your website URL">
-                  </label>
-              </p>
-
-              <ng-form>
-                  <label class="w3-label">Plot No.: 
-                    <input class="w3-input" type="text" placeholder="enter plot number" ng-model="school.PlotNumber">
-                  </label>
-                  <label class="w3-label">Street: 
-                    <input class="w3-input" type="text" placeholder="enter street" ng-model="school.Street">
-                  </label>
-                  <label class="w3-label">City: 
-                    <input class="w3-input" type="text" placeholder="enter city" ng-model="school.city">
-                  </label>
-                  <label class="w3-label">PIN Code: 
-                    <input class="w3-input" type="text" placeholder="enter PIN code" ng-model="school.PINCode">
-                  </label>
-                  <label class="w3-label">State: 
-                    <input class="w3-input" type="text" placeholder="enter state" ng-model="school.state">
-                  </label>
-                  <label class="w3-label">Country: 
-                    <input class="w3-input" type="text" placeholder="enter country" ng-model="school.country">
-                  </label>
-              </ng-form>
-
-              <input class="w3-btn w3-green w3-margin" type="submit" value="Submit">
-              <input class="w3-btn w3-green w3-margin" type="reset" value="Reset">
-            </form>
-            <p><pre>{{school | json}}</pre></p>
-          </div><!-- col -->
-        </div><!-- row -->
-        </section>
+        <ui-view></ui-view>
       </main>
 
-        <script src="js/node_modules/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
+        <!-- <script src="js/node_modules/uirouter.min.js"></script> -->
         <script src="js/app/app.js"></script>
+        <script src="js/app/appStates.js"></script>
         <script src="js/controllers/formController.js"></script>
         <script src="js/main.js"></script>
     </body>

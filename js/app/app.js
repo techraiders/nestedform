@@ -1,1 +1,1 @@
-angular.module("nestedForm", []);
+angular.module("nestedForm", ['ui.router']);

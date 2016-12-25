@@ -61,9 +61,11 @@ form {
     max-width: 800px;
     margin: 0 auto;
 }
-
-
-
+.regDetails {
+    border: 1px solid #009688;
+    padding: 10px;
+    margin: 10px;
+}
 
 
 
@@ -77,7 +79,6 @@ form {
 }
 
 @media print,
-       (-o-min-device-pixel-ratio: 5/4),
        (-webkit-min-device-pixel-ratio: 1.25),
        (min-resolution: 120dpi) {
 

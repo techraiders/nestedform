@@ -1,0 +1,22 @@
+<h3>Thank you for registration:</h3>
+<div class="regDetails" ng-repeat="school in schoolsList">
+  <p>
+    Sr. {{$index+1}} <br/>
+    School Name: {{school.name}}<br/>
+    <strong>Schools Level:</strong> <br/>
+    Primary: {{school.Primary}}<br/> 
+    Secondary: {{school.Secondary}} <br>
+    Higher Secondary: {{school.HigherSecondary}}<br/>
+    School Board: {{school.Board}} <br/>
+    School Type: {{school.SchoolType}} <br/>
+    Website: {{school.Url}} <br/>
+    Plot No.: {{school.PlotNumber}}
+    Street: {{school.Street}}<br/>
+    City: {{school.city}}<br/>
+    Pin Code: {{school.PINCode}}<br/>
+    State: {{school.state}}<br/>
+    Country: {{school.country}}<br/>
+  </p>
+</div>
+<a href="" ui-sref="schoolregistration">Register More</a>
+<p class="w3-orange">Note: As there is no backend support. All registration will be lost as soon as you refresh/reload your browser.</p>
